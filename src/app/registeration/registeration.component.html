@@ -1,0 +1,25 @@
+<div class="loginmodal-container">
+
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item active"></li>
+  </ol>
+  <div class="login-seperator">
+    <h4>
+      Register New User
+    </h4>
+    <br>
+  </div>
+  <form>
+    <div *ngIf="!login" class="alert alert-danger loginerr" role="alert">{{loginErr}}</div>
+    <label>Email</label>
+    <input #email type="email" name="email" placeholder="Email" value="demo@sumanb.com" required>
+    <!--Demo Login info-->
+    <label>Password</label>
+    <input #pass type="password" name="pass" placeholder="Password" value="hunter2" required>
+
+    <input type="submit" name="login" class="loginmodal-submit" value="Sign Up"
+           (click)="registerUser(email.value, pass.value)">
+
+  </form>
+
+</div>
